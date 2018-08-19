@@ -1,0 +1,384 @@
+@import 'https://fonts.googleapis.com/css?family=Ubuntu:300, 400, 500, 700';
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+
+*, *:after, *:before {
+  margin: 0;
+  padding: 0;
+}
+
+.svg-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+
+body {
+  background: #fff;
+  color: #333;
+  font-family: 'Ubuntu', sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+html { 
+    height:100%;
+}
+body { 
+    min-height:100%;
+}
+
+h3 {
+  font-family: 'Dancing Script', cursive,  sans-serif;
+  font-weight: 400;
+  font-size: 30px;
+}
+
+h1{
+  font-family: 'Dancing Script', cursive,  sans-serif;
+  font-size: 90px;
+}
+
+header {
+  color: #fff;
+  padding-top: 12vw;
+  padding-bottom: 10vw;
+  text-align: center;
+}
+
+main {
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 0, 0, .2);
+  padding: 10vh 0 80vh;
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
+
+.footer{
+  background: linear-gradient(160deg, rgba(252,0,255,1) 0%, rgba(129,107,239,1) 50%, rgba(0,219,222,1) 100%);    
+}
+
+.the-footer {
+  background: rgba(0,0,0,0.1);
+  height: 40px;
+  color: #fff;
+  padding: 1vh 0;
+  text-align: center;
+}
+
+.pre-footer{
+  background: transparent;
+  height: 100px;
+  text-align: center;
+  color: #fff;
+  padding: 5vh 0;
+}
+
+.aboutme{
+    padding: 0px 200px 0px 200px;
+}
+
+.column {
+    float: left;
+}
+
+.left {
+    width: 25%;
+}
+
+.right {
+    width: 75%;
+}
+
+.aboutme:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container {
+  width: 100%;
+  background-color: #ddd;
+  padding: 0px 2Opx 0px 2Opx;
+  border-radius: 999px;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: 'segoe ui';
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  position: fixed;
+  text-align: center;
+  z-index: 9999;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  font-family: 'Dancing Script', cursive;
+  color: #fff;
+  margin: 5px 10px 20px;
+  display: none;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: #efefef;
+}
+
+.nav > .nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:600px) {
+  .nav > .nav-btn {
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: inherit;
+    display: block;
+    width: 100%;
+    background-color: #613f75;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) + .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked + .nav-links {
+    height: 100vh;
+  }
+  .nav > #nav-check:checked + .nav-links>ul>li {
+    display: block;
+    text-align: center;
+  }
+}
+
+h1{
+    display: none;
+    font-size: 16vw;
+}
+
+h3{
+    display: none;
+    font-size: 3vw;
+}
+
+@media (max-width:1140px) {
+    text{
+        display: none;
+    }
+    h1,h3{
+        display: block;
+    }
+}
+
+button {
+  background-color: transparent;
+  font-family: 'Dancing Script', cursive;
+  font-size: 22px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 999px;
+  padding: 5px 40px;
+  position: relative;
+  cursor: pointer;
+  z-index: 1;
+  overflow: hidden;
+  transition: all .5s ease-in-out;
+}
+
+button > span.bg {
+  background: white;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  transition: all .3s ease-in-out;
+}
+
+button:hover {
+  color: #613f75;
+}
+
+button:hover > span.bg {
+  transition: all .3s ease-in-out;
+}
+
+button.bottom > .bg {
+  left: 0;
+  bottom: 100%;
+  transform: translateY(200%);
+}
+
+button.bottom:hover > .bg {
+  transform: translateY(100%);
+}
+
+ul>li {
+  display: inline-block;
+}
+
+text {
+  font-family: 'Dancing Script', cursive;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  -webkit-animation: draw 8s forwards;
+  -moz-animation: draw 8s forwards;
+  -o-animation: draw 8s forwards;
+  -ms-animation: draw 8s forwards;
+  animation: draw 8s forwards;
+  animation: stroke_fill 8s linear forwards;
+}
+@-webkit-keyframes draw {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-moz-keyframes draw {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-o-keyframes draw {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@-ms-keyframes draw {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes draw {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes stroke_fill {
+  0% {
+    fill: transparent;
+  }
+  50% {
+    fill: transparent;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    fill: white;
+    stroke-dashoffset: 0;
+  }
+}
+
+.material-icons {
+  -webkit-animation: MoveUpDown 1s linear infinite;
+  -moz-animation: MoveUpDown 1s linear infinite;
+  -o-animation: MoveUpDown 1s linear infinite;
+  -ms-animation: MoveUpDown 1s linear infinite;
+  animation: MoveUpDown 1s linear infinite;
+  position: relative;
+  display: none;
+}
+
+@-webkit-keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 10px;
+  }
+}
+@-moz-keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 10px;
+  }
+}
+@-o-keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 10px;
+  }
+}
+@-ms-keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 10px;
+  }
+}
+@keyframes MoveUpDown {
+  0%, 100% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 10px;
+  }
+}
